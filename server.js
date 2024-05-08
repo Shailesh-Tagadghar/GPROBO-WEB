@@ -36,8 +36,8 @@
 // const transporter = nodemailer.createTransport({
 //     service: 'Gmail',
 //     auth: {
-//         user: 'tagadgharshailesh@gmail.com', // Your email address
-//         pass: 'ehwb yjsu vqac mdik' // Your email password
+//         user: 'example@gmail.com', // Your email address
+//         pass: '' // Your email password
 //     }
 // });
 
@@ -66,7 +66,7 @@
 //         // Send email containing form data
 //         await transporter.sendMail({
 //             from: senderEmail,
-//             to: 'tagadgharshailesh@gmail.com', // Your email address as recipient
+//             to: 'example@gmail.com', // Your email address as recipient
 //             subject: 'New Career Application',
 //             html: `
 //                 <p>New career application received!</p>
@@ -125,11 +125,11 @@
 // //         // Configure your email service
 // //         service: 'Gmail',
 // //         auth: {
-// //             user: 'tagadgharshailesh@gmail.com', // Your email address
-// //             pass: 'ehwb yjsu vqac mdik' // Your email password
+// //             user: 'example@gmail.com', // Your email address
+// //             pass: '' // Your email password
 // //         }
 // //     });
-
+// ehwb yjsu vqac mdik
 // //     // Setup email data
 // //     let mailOptions = {
 // //         from: senderEmail, // Sender will be the email provided in the form
@@ -179,7 +179,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://tagadgharshailesh:Shailex1234@cluster0.bdcw4yt.mongodb.net/GpROBO?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://username:password@cluster0.bdcw4yt.mongodb.net/databasename?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
@@ -251,15 +251,15 @@ async function sendEmail(senderEmail, application) {
         // Configure your email service
         service: 'Gmail',
         auth: {
-            user: 'tagadgharshailesh@gmail.com', // Your email address
-            pass: 'ehwb yjsu vqac mdik' // Your email password
+            user: 'example@gmail.com', // Your email address
+            pass: '' // Your email password
         }
     });
 
     // Setup email data
     let mailOptions = {
         from: senderEmail, // Use a fixed sender email
-        to: 'tagadgharshailesh@gmail.com', // Your email address as recipient
+        to: 'example@gmail.com', // Your email address as recipient
         subject: 'New Career Application',
         text: 'New career application received!',
         html: `<p>New career application received!</p>
@@ -288,7 +288,7 @@ async function sendEmail(senderEmail, application) {
 app.post('/adminLogin', (req, res) => {
     const { username, password } = req.body;
     // Validate admin credentials (Replace with your authentication logic)
-    if (username === 'admin' && password === 'Shailesh@1') {
+    if (username === 'username' && password === 'password') {
         // Redirect to admin dashboard upon successful authentication
         res.redirect('/admin-dashboard');
     } else {
